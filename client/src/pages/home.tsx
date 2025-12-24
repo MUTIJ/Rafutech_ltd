@@ -25,7 +25,8 @@ import {
   icons,
   CodeXml,
   GoalIcon,
-  Projector
+  Projector,
+  Phone
 } from "lucide-react";
 import { 
   SiJavascript, 
@@ -45,7 +46,8 @@ import {
   SiTestin,
   SiTestcafe,
   SiPm2,
-  SiNotion
+  SiNotion,
+  SiAndroid
 } from "react-icons/si";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -65,6 +67,7 @@ import clientWoman from "@assets/generated_images/client_testimonial_woman.png";
 import clientMan from "@assets/generated_images/client_testimonial_man.png";
 import { title } from "process";
 import { Description } from "@radix-ui/react-toast";
+import App from "@/App";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -129,6 +132,11 @@ export default function Home() {
       icon: Globe,
       title: "Web Development",
       description: "Build stunning, responsive websites and web applications with cutting-edge technologies, optimized for performance and user experience.",
+    },
+    {
+      icon: SiAndroid, 
+      title: "Mobile App Development",
+      description: "End-to-end mobile application development services for Android and iOS, creating user-friendly, high-performance apps tailored to your business requirements.",
     },
     {
       icon: Wallet,
