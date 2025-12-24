@@ -21,7 +21,11 @@ import {
   Mail,
   Clock,
   MapPin,
-  Star
+  Star,
+  icons,
+  CodeXml,
+  GoalIcon,
+  Projector
 } from "lucide-react";
 import { 
   SiJavascript, 
@@ -31,13 +35,23 @@ import {
   SiTensorflow,
   SiAmazon,
   SiDocker,
-  SiPostgresql 
+  SiPostgresql, 
+  SiSpringboot,
+  SiFlutter,
+  SiAngular,
+  SiPhp,
+  SiGoodreads,
+  SiQualtrics,
+  SiTestin,
+  SiTestcafe,
+  SiPm2,
+  SiNotion
 } from "react-icons/si";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { insertContactInquirySchema, type InsertContactInquiry } from "@shared/schema";
-import { useMutation } from "@tanstack/react-query";
+import { onlineManager, useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 
@@ -49,6 +63,8 @@ import ecommerceMockup from "@assets/generated_images/e-commerce_web_mockup.png"
 import blockchainPlatform from "@assets/generated_images/blockchain_crypto_platform.png";
 import clientWoman from "@assets/generated_images/client_testimonial_woman.png";
 import clientMan from "@assets/generated_images/client_testimonial_man.png";
+import { title } from "process";
+import { Description } from "@radix-ui/react-toast";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -124,6 +140,16 @@ export default function Home() {
       title: "Custom Development",
       description: "Tailored software solutions designed specifically for your business needs, from enterprise applications to mobile apps.",
     },
+    {
+      icon: SiNotion,
+      title: "Project management",
+      description:"Professional project management services for contract-based engagements, guiding your project from planning, resource allocation, and execution to successful go-live, ensuring timely delivery and quality outcomes."
+    },
+    {
+      icon: SiTestcafe, // replace with your actual icon
+      title: "Quality Assurance ",
+      description: "Contract-based quality assurance services ensuring your software meets functional and performance standards through rigorous testing and validation processes.",
+    }
   ];
 
   const benefits = [
@@ -231,6 +257,10 @@ export default function Home() {
     { icon: SiAmazon, name: "AWS" },
     { icon: SiDocker, name: "Docker" },
     { icon: SiPostgresql, name: "PostgreSQL" },
+    { icon: SiSpringboot, name: "SpringBoot" },
+    { icon : SiFlutter, name: " Flutter" },
+    {icon: SiAngular, name: "Angular"},
+    {icon: SiPhp, name: "PHP"},
   ];
 
   return (
@@ -820,6 +850,14 @@ export default function Home() {
                     className="text-muted-foreground hover:text-primary hover-elevate px-2 py-1 -ml-2 rounded-md"
                   >
                     Custom Development
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => scrollToSection("services")}
+                    className="text-muted-foreground hover:text-primary hover-elevate px-2 py-1 -ml-2 rounded-md"
+                  >
+                    Mobile Apps.
                   </button>
                 </li>
               </ul>
