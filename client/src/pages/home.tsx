@@ -246,9 +246,18 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between gap-4">
             <div className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-md bg-primary flex items-center justify-center">
+              {/* <div className="h-8 w-8 rounded-md bg-primary flex items-center justify-center">
                 <Sparkles className="h-5 w-5 text-primary-foreground" />
-              </div>
+              </div> */}
+              <div className="h-10 w-10 rounded-md flex items-center justify-center">
+              <img 
+                src="/favicon.png" 
+                alt="Logo" 
+                className="h-7 w-7 object-contain" 
+              />
+            </div>
+
+
               <span className={`text-xl font-display font-bold ${isScrolled ? "text-foreground" : "text-white"}`}>
                 Rafutech Ltd
               </span>
@@ -317,11 +326,19 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+          <div className="h-100 w-100 rounded-md flex items-center justify-center">
+            <img 
+              src="/favicon.png" 
+              alt="Logo" 
+              className="h-65 w-65 object-contain" 
+            />
+          </div>
+
           <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl text-white mb-6">
             Transforming Ideas into Intelligent Solutions
           </h1>
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-            AI • Web Development • Fintech • Custom Solutions
+            AI • Web Development • Fintech • Custom Solutions • Mobile Application 
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
             <Button
@@ -711,7 +728,7 @@ export default function Home() {
                     <div>
                       <div className="font-medium text-foreground">Email</div>
                       <a
-                        href="mailto:contact@rafutech.com"
+                        href="mailto:jeihezmurithi@gmail.com"
                         className="text-muted-foreground hover:text-primary"
                       >
                         contact@rafutech.com
